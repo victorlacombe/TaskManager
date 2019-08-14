@@ -2,7 +2,10 @@
 <p>Find me in app/views/tasks/index.html.erb</p>
 
 <% @tasks.each do |task| %>
-  <h2><%= task.name %></h2>
+  <h2>
+    <%= task.name %>
+    <%= link_to "Details", task_path(task) %>
+  </h2>
   <p><%= task.description %></p>
   <ul>
     <li><%= task.owner %></li>
